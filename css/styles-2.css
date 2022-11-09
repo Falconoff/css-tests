@@ -1,0 +1,61 @@
+h1 {
+  color: gold;
+}
+
+.product {
+  outline: 2px solid red;
+  /* display: inline-block; */
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* при наведении на карточку отображаем соцсети */
+.product:hover .socials {
+  opacity: 1;
+}
+
+.thumb {
+  position: relative;
+  color: red;
+}
+
+.product img {
+  width: 500px;
+}
+
+.socials {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  opacity: 0;
+  transition: opacity 500ms linear;
+}
+
+.socials li a {
+  outline: 1px solid red;
+  /* display: inline-block; */
+  font-size: 0;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.product-meta {
+  padding: 15px;
+}
+.product-name {
+  padding: 0;
+  margin: 0;
+}

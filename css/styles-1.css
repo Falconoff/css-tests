@@ -1,0 +1,49 @@
+h1 {
+  color: red;
+}
+
+.img1,
+.img3 {
+  background-image: url("https://cdn.pixabay.com/photo/2020/10/07/10/51/mountains-5634817_1280.jpg");
+}
+.img2 {
+  background-image: url("https://image.ibb.co/mjdbZ5/bg5.jpg");
+}
+
+.container {
+  padding: 40px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+}
+
+.box {
+  height: 300px;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+}
+
+.box:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.box:nth-child(1) {
+  background-color: #2196f3;
+}
+
+.box:nth-child(2) {
+  background-color: #4caf50;
+}
+
+.box:nth-child(3) {
+  background-color: #ff9800;
+}
+
+.box:nth-child(4) {
+  background-color: #e91e63;
+}
