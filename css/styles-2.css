@@ -1,34 +1,15 @@
 .product {
   outline: 2px solid #bbb;
-  /* display: inline-block; */
+  display: inline-block;
   width: 500px;
-  margin-right: auto;
-  margin-left: auto;
+  /* margin-right: auto; */
+  /* margin-left: auto; */
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 /* при наведении на карточку отображаем соцсети */
 .product:hover .socials {
-  opacity: 1;
-}
-
-.thumb {
-  position: relative;
-}
-
-.thumb::before {
-  content: "";
-  position: absolute;
-
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transition: opacity 300ms linear;
-}
-
-.product:hover .thumb::before {
   opacity: 1;
 }
 
@@ -75,4 +56,73 @@
 .product-name {
   padding: 0;
   margin: 0;
+}
+
+.thumb {
+  position: relative;
+}
+
+/* =========== Effect 1 =========== */
+
+.thumb-1::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(155, 0, 255, 0.3);
+  opacity: 0;
+  transition: opacity 300ms linear;
+}
+
+.product:hover .thumb-1::before {
+  opacity: 1;
+}
+
+/* =========== Effect 2 =========== */
+
+.thumb-2 {
+  overflow: hidden;
+}
+.overlay-2 {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 255, 0.3);
+  /* opacity: 0; */
+  transition: transform 300ms linear;
+  transform: translateX(-100%);
+}
+
+.product:hover .overlay-2 {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+/* =========== Effect 3 =========== */
+
+.thumb-3 {
+  overflow: hidden;
+}
+.overlay-3 {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 0, 0.3);
+  opacity: 0;
+  transition: transform 300ms linear, opacity 300ms linear;
+  transform: scale(0.5);
+}
+
+.product:hover .overlay-3 {
+  opacity: 1;
+  transform: scale(1);
 }
