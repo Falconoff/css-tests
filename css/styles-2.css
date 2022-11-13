@@ -1,7 +1,3 @@
-h1 {
-  color: gold;
-}
-
 .product {
   outline: 2px solid #bbb;
   /* display: inline-block; */
@@ -29,6 +25,7 @@ h1 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
+  transition: opacity 300ms linear;
 }
 
 .product:hover .thumb::before {
@@ -62,11 +59,10 @@ h1 {
 }
 
 .icon {
-  width: 32px;
-  height: 32px;
   padding: 10px;
   background-color: #bbb;
   transition: background-color 300ms linear;
+  /* fill: red; */
 }
 .icon:hover {
   background-color: #ccc;

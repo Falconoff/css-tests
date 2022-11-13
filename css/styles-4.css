@@ -1,0 +1,100 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+
+  font-size: 18px;
+
+  background-color: #fff;
+
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #eee;
+}
+
+/* ====== before & after ====== */
+.btn-1::before,
+.btn-1::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+
+  transition-property: opacity, transform;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.btn-1::before {
+  background-color: #f00;
+  opacity: 1;
+}
+
+.btn-1::after {
+  position: absolute;
+
+  background-color: #0f0;
+  opacity: 0;
+
+  transform: translateY(32px);
+}
+
+.btn-1:hover::before,
+.btn-1:focus::before {
+  transform: translateY(-32px);
+  opacity: 0;
+}
+
+.btn-1:hover::after,
+.btn-1:focus::after {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* ======== icons ======== */
+
+.btn-2 .icon-1,
+.btn-2 .icon-2 {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+
+  transition-property: opacity, transform;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.btn-2 .icon-1 {
+  opacity: 1;
+}
+
+.btn-2 .icon-2 {
+  position: absolute;
+
+  opacity: 0;
+
+  transform: translateY(32px);
+}
+
+.btn-2:hover .icon-1,
+.btn-2:focus .icon-1 {
+  transform: translateY(-32px);
+  opacity: 0;
+}
+
+.btn-2:hover .icon-2,
+.btn-2:focus .icon-2 {
+  opacity: 1;
+
+  transform: translateY(0px);
+}
