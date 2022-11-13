@@ -13,9 +13,12 @@
 
 .menu-item {
   position: relative;
-  margin-right: 10px;
   background-color: #bbb;
   outline: 1px solid red;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .submenu {

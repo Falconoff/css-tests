@@ -1,0 +1,91 @@
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+}
+
+.menu-link {
+  position: relative;
+
+  display: block;
+  padding: 10px 20px;
+  color: currentColor;
+}
+
+.menu-item {
+  position: relative;
+  background-color: #ddd;
+  outline: 1px solid #444;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* effect 1 - from left to right */
+
+.effect-1::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 0%;
+  height: 5px;
+  background-color: red;
+
+  transition: width 300ms linear;
+}
+
+.effect-1:hover:after {
+  width: 100%;
+}
+
+/* effect 2 - from center */
+
+.effect-2::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: red;
+
+  transform: scaleX(0);
+  transition: transform 300ms linear;
+}
+
+.effect-2:hover:after {
+  transform: scaleX(1);
+}
+
+/* effect 3 - from right to left */
+
+.effect-3::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: red;
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms linear;
+}
+
+.effect-3:hover:after {
+  transform: scaleX(1);
+}
