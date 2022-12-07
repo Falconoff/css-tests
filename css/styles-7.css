@@ -1,0 +1,14 @@
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-input {
+  padding: 10px 20px;
+  font: inherit;
+  border-radius: 3px;
+  border: 1px solid #333;
+}
+
+.form-input:focus + .form-label {
+  color: red;
+}
