@@ -1,24 +1,32 @@
-.scene {
-  width: 300px;
-  height: 300px;
-  border: 3px solid blue;
-
-  perspective: 400px;
+.form {
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
 }
 
-.box {
-  height: 100%;
-  background-color: pink;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transform: rotateY(0);
-  transition: transform 500ms linear;
+.form-field {
+  position: relative;
+  margin-bottom: 20px;
 }
 
-/* :hover обязательно на невращающийся блок (родителя) */
-.scene:hover .box {
-  transform: rotateY(180deg);
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  background-color: aqua;
+
+  transition: transform 250ms linear;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 20px;
+  font: inherit;
+  border-radius: 3px;
+  border: 1px solid #333;
+}
+
+.form-input:focus + .form-label {
+  transform: translateY(-50px);
 }

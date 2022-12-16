@@ -6,18 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS-tests</title>
     <link rel="stylesheet" href="../css/styles-common.css" />
-    <link rel="stylesheet" href="../css/styles-7.css" />
+    <link rel="stylesheet" href="../css/styles-8.css" />
   </head>
   <body>
-    <h1>Flip</h1>
+    <h1>Form</h1>
 
     <a href="../index.html" class="back-btn">Back to main</a>
 
+    <form class="form" autocomplete="off">
+      <div class="form-field">
+        <input
+          type="text"
+          class="form-input"
+          name="name"
+          id="name"
+          placeholder="Иван Иванович"
+        />
+        <label for="name" class="form-label">Name</label>
+      </div>
 
-    <div class="scene">
-      <div class="box">FLIP</div>
-    </div>
-   
-    </script>
+      <div class="form-field">
+        <input
+          type="email"
+          class="form-input"
+          name="mail"
+          id="mail"
+          placeholder="ivan@gmail.com"
+        />
+        <label for="email" class="form-label">e-mail</label>
+      </div>
+    </form>
   </body>
 </html>
