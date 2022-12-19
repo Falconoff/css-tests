@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-tests</title>
+    <link rel="stylesheet" href="../css/styles-common.css" />
+    <link rel="stylesheet" href="../css/styles-9.css" />
+  </head>
+  <body>
+    <h1>формы (современное оформление метки)</h1>
+
+    <a href="../index.html" class="back-btn">Back to main</a>
+
+    <form class="form" autocomplete="off">
+      <!-- порядок следования label, icon и input НЕ важен! -->
+      <div class="form-field">
+        <span class="icon"></span>
+        <input
+          type="text"
+          class="form-input"
+          name="name"
+          id="name"
+          placeholder=" "
+          title="Enter your name"
+          required
+        />
+        <label for="name" class="form-label">Name</label>
+      </div>
+
+      <div class="form-field">
+        <span class="icon"></span>
+        <input
+          type="email"
+          class="form-input"
+          name="mail"
+          id="mail"
+          placeholder=" "
+          title="Enter your email"
+          required
+        />
+        <label for="email" class="form-label">e-mail</label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

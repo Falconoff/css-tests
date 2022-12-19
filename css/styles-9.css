@@ -1,0 +1,54 @@
+.form {
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+
+  transition: transform 250ms linear;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 40px;
+  font: inherit;
+  border-radius: 3px;
+  border: 1px solid #333;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+
+  transform: translateY(-50%);
+
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: tomato;
+}
+
+/* используем псевдокласс :focus-within */
+.form-field:focus-within .icon {
+  background-color: blue;
+}
+
+.form-field:focus-within > .form-label {
+  transform: translateY(-50px);
+}
+
+/* смещение label при введённом тексте приходится делать олдскульно  скрытие  */
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translateY(-50px);
+}
