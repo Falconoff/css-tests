@@ -6,15 +6,15 @@
 
 .form-field {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .form-label {
   position: absolute;
   top: 50%;
-  left: 30px;
+  left: 10px;
   transform: translateY(-50%);
-  background-color: aqua;
+  /* background-color: aqua; */
 
   transition: transform 250ms linear;
 }
@@ -27,6 +27,30 @@
   border: 1px solid #333;
 }
 
-.form-input:focus + .form-label {
+/* смещаем label вверх когда есть фокус на input ИЛИ когда НЕ показан placeholder (т.е. когда есть какой-то введённый текст в input) */
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
   transform: translateY(-50px);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+
+  transform: translateY(-50%);
+
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: tomato;
+}
+
+/* для работы  с иконкой исп-ся селектор ~ ("все соседи") */
+.form-input:focus ~ .icon {
+  background-color: blue;
+}
+
+.with-icon {
+  left: 45px;
 }

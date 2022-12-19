@@ -14,13 +14,18 @@
     <a href="../index.html" class="back-btn">Back to main</a>
 
     <form class="form" autocomplete="off">
+      <!-- label после input  -->
+      <!-- в первом инпуте управляем отображением placeholder-а при помощи скрипта -->
       <div class="form-field">
         <input
           type="text"
           class="form-input"
           name="name"
           id="name"
-          placeholder="Иван Иванович"
+          placeholder=" "
+          data-placeholder="Иван Иванович"
+          title="Enter your name"
+          required
         />
         <label for="name" class="form-label">Name</label>
       </div>
@@ -32,9 +37,52 @@
           name="mail"
           id="mail"
           placeholder="ivan@gmail.com"
+          title="Enter your email"
+          required
         />
         <label for="email" class="form-label">e-mail</label>
       </div>
+
+      <div class="form-field">
+        <input
+          type="phone"
+          class="form-input"
+          name="phone"
+          id="phone"
+          placeholder=" "
+          title="нет placeholder"
+          required
+        />
+        <label for="phone" class="form-label">нет placeholder-a</label>
+      </div>
+
+      <div class="form-field">
+        <input
+          type="phone"
+          class="form-input"
+          name="phone"
+          id="phone"
+          placeholder=" "
+          title="нет placeholder"
+          required
+        />
+        <label for="phone" class="form-label with-icon"
+          >нет placeholder-a + icon</label
+        >
+        <span class="icon"></span>
+      </div>
+
+      <button type="submit">Submit</button>
     </form>
+
+    <script>
+      document.querySelector(".form-input").addEventListener("focusin", e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+
+      document.querySelector(".form-input").addEventListener("focusout", e => {
+        e.currentTarget.placeholder = " ";
+      });
+    </script>
   </body>
 </html>
