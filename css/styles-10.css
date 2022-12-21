@@ -1,0 +1,33 @@
+.form {
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.checkbox {
+  /* сбрасываем всё оформление от браузера и выбиваем из потока */
+  /* appearance: none; */
+  /* position: absolute; */
+}
+
+.label {
+  cursor: pointer;
+}
+
+/* кастомный чекбокс */
+.label::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
+
+/* первый вариант - input и label соседи */
+.checkbox:checked + .label::after {
+  background-color: green;
+}
