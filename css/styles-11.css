@@ -1,0 +1,70 @@
+.form {
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+}
+
+li {
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+.label {
+  cursor: pointer;
+}
+
+/* === скрываем браузерный чекбокс === */
+.checkbox {
+  /* 1 вариант - appearance */
+
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute; */
+
+  /* 2 вариант - visually hidden */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* ---------------------------- */
+
+/* кастомный чекбокс */
+.label-1::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+
+  margin-right: 5px;
+}
+
+/* первый вариант - input и label соседи */
+.checkbox:checked + .label-1::before {
+  background-color: green;
+}
+
+/* второй вариант - input вложен в label */
+.icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid black;
+  border-radius: 3px;
+}
+
+.checkbox:checked + .icon {
+  border-color: transparent;
+  background-color: #f2f;
+  background-image: url("../images/icon.svg");
+  background-size: contain;
+  background-origin: border-box;
+}

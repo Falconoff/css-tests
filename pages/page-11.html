@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-tests</title>
+    <link rel="stylesheet" href="../css/styles-common.css" />
+    <link rel="stylesheet" href="../css/styles-10.css" />
+  </head>
+  <body>
+    <h1>формы (современное оформление метки)</h1>
+
+    <a href="../index.html" class="back-btn">Back to main</a>
+
+    <form class="form" autocomplete="off">
+      <ul>
+        <!-- первый вариант - input и label соседи -->
+        <li>
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="topic"
+            value="html"
+            id="html"
+          />
+          <label class="label label-1" for="html">HTML</label>
+        </li>
+        <li>
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="topic"
+            value="css"
+            id="css"
+          />
+          <label class="label label-1" for="css">CSS</label>
+        </li>
+        <li>
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="topic"
+            value="js"
+            id="js"
+          />
+          <label class="label label-1" for="js">JavaScript</label>
+        </li>
+
+        <!-- второй вариант - input вложен в label -->
+        <li>
+          <label class="label label-2"
+            ><input
+              class="checkbox"
+              type="checkbox"
+              name="topic"
+              value="html"
+            />
+            <span class="icon"></span>
+            HTML</label
+          >
+        </li>
+        <li>
+          <label class="label label-2"
+            ><input class="checkbox" type="checkbox" name="topic" value="css" />
+            <span class="icon"></span>
+            CSS</label
+          >
+        </li>
+        <li>
+          <label class="label label-2"
+            ><input class="checkbox" type="checkbox" name="topic" value="js" />
+            <span class="icon"></span>
+            JavaScript</label
+          >
+        </li>
+      </ul>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
