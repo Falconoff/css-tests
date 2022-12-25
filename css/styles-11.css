@@ -9,62 +9,80 @@ li {
   list-style: none;
 }
 
-.label {
+.label-1 {
+  position: relative;
   cursor: pointer;
+  transition: color 0.2s linear;
 }
 
 /* === скрываем браузерный чекбокс === */
 .checkbox {
   /* 1 вариант - appearance */
 
-  /* -webkit-appearance: none;
+  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  position: absolute; */
+  position: absolute;
 
   /* 2 вариант - visually hidden */
 
-  position: absolute;
+  /* position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  overflow: hidden; */
 }
 /* ---------------------------- */
 
 /* кастомный чекбокс */
 .label-1::before {
   content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: red;
-
-  margin-right: 5px;
+  position: absolute;
+  top: 0;
+  left: -44px;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  border: 2px solid green;
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+  transition-property: transform, border-color;
 }
 
-/* первый вариант - input и label соседи */
+/* если чекнутый, показываем "галочку" */
 .checkbox:checked + .label-1::before {
-  background-color: green;
+  /* width: 21px;
+  height: 10px; */
+  border-color: green;
+  border-width: 3px;
+  /* border-top-style: none;
+  border-right-style: none; */
+  border-top-color: transparent;
+  border-right-color: transparent;
+
+  /* поворот, масштабирование и смещение "галочки" */
+  transform: rotate(-45deg) scaleX(1.2) scaleY(0.7) translateX(3px)
+    translateY(-5px);
+  /* transform-origin: center; */
 }
 
-/* второй вариант - input вложен в label */
-.icon {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-
-  border: 2px solid black;
-  border-radius: 3px;
+/* фокус на чекнутом */
+.checkbox:focus + .label-1::before {
+  border-bottom-color: #0f0;
+  border-left-color: #0f0;
+  border-top-color: transparent;
+  border-right-color: transparent;
 }
 
-.checkbox:checked + .icon {
-  border-color: transparent;
-  background-color: #f2f;
-  background-image: url("../images/icon.svg");
-  background-size: contain;
-  background-origin: border-box;
+/* фокус на не чекнутом */
+.checkbox:focus:not(:checked) + .label-1::before {
+  border-color: #0f0;
+}
+
+/* надпись при фокусе */
+.checkbox:focus + .label-1 {
+  color: #0f0;
 }
