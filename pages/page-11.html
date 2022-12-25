@@ -80,7 +80,26 @@
         </li>
       </ul>
 
+      <div class="input-wrap">
+        <input class="text-input" type="text" required />
+        <div class="label-box">
+          <label>Слово по-английски</label>
+        </div>
+      </div>
+
+      <div class="menu-icon">
+        <span></span>
+      </div>
+
       <button type="submit">Submit</button>
     </form>
+
+    <script type="text/javascript">
+      let button = document.querySelector(".menu-icon");
+
+      button.onclick = function () {
+        button.classList.toggle("menu-icon-open");
+      };
+    </script>
   </body>
 </html>
