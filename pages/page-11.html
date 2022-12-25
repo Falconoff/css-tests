@@ -46,35 +46,40 @@
           />
           <label class="label label-1" for="js">JavaScript</label>
         </li>
-
-        <!-- второй вариант - input вложен в label -->
-        <!-- <li>
-          <label class="label label-2"
-            ><input
-              class="checkbox"
-              type="checkbox"
-              name="topic"
-              value="html"
-            />
-            <span class="icon"></span>
-            HTML</label
-          >
-        </li>
-        <li>
-          <label class="label label-2"
-            ><input class="checkbox" type="checkbox" name="topic" value="css" />
-            <span class="icon"></span>
-            CSS</label
-          >
-        </li>
-        <li>
-          <label class="label label-2"
-            ><input class="checkbox" type="checkbox" name="topic" value="js" />
-            <span class="icon"></span>
-            JavaScript</label
-          >
-        </li> -->
       </ul>
+
+      <!-- radiobuttons -->
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="answer1" />
+          <label class="label radio__label" for="answer1">transparency</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="answer2" />
+          <label class="label radio__label" for="answer2">opacity</label>
+        </li>
+        <li>
+          <input type="radio" name="answer" id="answer3" />
+          <label class="label radio__label" for="answer3">invisibility</label>
+        </li>
+      </ul>
+
+      <!-- Переключатели -->
+      <ul class="switcher__list">
+        <li>
+          <input class="switcher__checkbox" type="checkbox" id="answ1" />
+          <label class="label switcher__label" for="answ1">qwe</label>
+        </li>
+        <li>
+          <input class="switcher__checkbox" type="checkbox" id="answ2" />
+          <label class="label switcher__label" for="answ2">rty</label>
+        </li>
+        <li>
+          <input class="switcher__checkbox" type="checkbox" id="answ3" />
+          <label class="label switcher__label" for="answ3">asd</label>
+        </li>
+      </ul>
+
       <button type="submit">Submit</button>
     </form>
   </body>

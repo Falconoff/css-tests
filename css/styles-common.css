@@ -1,5 +1,10 @@
+:root {
+  --bg-color: #999;
+}
 body {
-  background-color: #999;
+  /* background-color: #999; */
+  background-color: var(--bg-color);
+
   font-size: 18px;
   font-family: Arial, sans-serif;
   /* box-sizing: border-box; */

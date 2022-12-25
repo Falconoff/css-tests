@@ -9,7 +9,7 @@ li {
   list-style: none;
 }
 
-.label-1 {
+.label {
   position: relative;
   cursor: pointer;
   transition: color 0.2s linear;
@@ -84,5 +84,120 @@ li {
 
 /* надпись при фокусе */
 .checkbox:focus + .label-1 {
+  color: #0f0;
+}
+
+/* =========== RADIO =========== */
+/*  скрываем браузерные стили  */
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.radio__label::before,
+.radio__label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -44px;
+  border-radius: 50%;
+
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+  transition-property: transform, background-color;
+}
+
+/* пустой радио */
+.radio__label::before {
+  width: 16px;
+  height: 16px;
+  border: solid 2px green;
+}
+
+/* чекнутый радио */
+.radio__label::after {
+  width: 20px;
+  height: 20px;
+  transform: scale(0);
+}
+
+/* чекнутый с фокусом */
+input[type="radio"]:checked:focus-within ~ .radio__label::after {
+  transform: scale(1.1);
+  background-color: #0f0;
+}
+
+/* чекнутый без фокуса */
+input[type="radio"]:checked ~ .radio__label::after {
+  transform: scale(1.1);
+  background-color: green;
+}
+
+/* надпись при фокусе */
+input[type="radio"]:checked:focus-within ~ .radio__label {
+  color: #0f0;
+}
+
+/* ============ Переключатели ============== */
+.switcher__list {
+  padding-left: 0;
+}
+
+.switcher__checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.switcher__label {
+  position: relative;
+  display: inline-block;
+  max-width: 100px;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.switcher__label::before,
+.switcher__label::after {
+  position: absolute;
+  display: block;
+  content: "";
+}
+
+.switcher__label::before {
+  top: 7px;
+  left: 108px;
+  width: 32px;
+  height: 1px;
+  border-top: 2px solid green;
+}
+
+.switcher__label::after {
+  top: 0;
+  left: 100px;
+  width: 12px;
+  height: 12px;
+  border: solid 2px green;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+
+  transition: all ease-in 200ms;
+}
+
+.switcher__checkbox:checked ~ .switcher__label::after {
+  transform: translateX(32px);
+  border-color: green;
+  background-color: green;
+}
+
+.switcher__checkbox:focus ~ .switcher__label::before,
+.switcher__checkbox:focus ~ .switcher__label::after {
+  border-color: #0f0;
+}
+
+.switcher__checkbox:focus ~ .switcher__label {
   color: #0f0;
 }
