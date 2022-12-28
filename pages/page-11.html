@@ -23,6 +23,7 @@
             name="topic"
             value="html"
             id="html"
+            checked
           />
           <label class="label label-1" for="html">HTML</label>
         </li>
@@ -55,7 +56,7 @@
           <label class="label radio__label" for="answer1">transparency</label>
         </li>
         <li>
-          <input type="radio" name="answer" id="answer2" />
+          <input type="radio" name="answer" id="answer2" checked />
           <label class="label radio__label" for="answer2">opacity</label>
         </li>
         <li>
@@ -67,7 +68,12 @@
       <!-- Переключатели -->
       <ul class="switcher__list">
         <li>
-          <input class="switcher__checkbox" type="checkbox" id="answ1" />
+          <input
+            class="switcher__checkbox"
+            type="checkbox"
+            id="answ1"
+            checked
+          />
           <label class="label switcher__label" for="answ1">qwe</label>
         </li>
         <li>
@@ -85,10 +91,6 @@
         <div class="label-box">
           <label>Слово по-английски</label>
         </div>
-      </div>
-
-      <div class="menu-icon">
-        <span></span>
       </div>
 
       <button type="submit">Submit</button>

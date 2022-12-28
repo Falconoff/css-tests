@@ -13,7 +13,7 @@
 
     <a href="../index.html" class="back-btn">Back to main</a>
 
-    <form class="form" autocomplete="off">
+    <form class="form" autocomplete="on">
       <!-- label после input  -->
       <!-- в первом инпуте управляем отображением placeholder-а при помощи скрипта -->
       <div class="form-field">
@@ -25,6 +25,7 @@
           placeholder=" "
           data-placeholder="Иван Иванович"
           title="Enter your name"
+          autocomplete="name"
           required
         />
         <label for="name" class="form-label">Name</label>
@@ -38,6 +39,7 @@
           id="mail"
           placeholder="ivan@gmail.com"
           title="Enter your email"
+          autocomplete="email"
           required
         />
         <label for="email" class="form-label">e-mail</label>
@@ -51,6 +53,7 @@
           id="phone"
           placeholder=" "
           title="нет placeholder"
+          autocomplete="tel"
           required
         />
         <label for="phone" class="form-label">нет placeholder-a</label>
@@ -70,6 +73,40 @@
           >нет placeholder-a + icon</label
         >
         <span class="icon"></span>
+      </div>
+
+      <!-- ================================================================== -->
+
+      <!-- ================================================================== -->
+
+      <div class="form-field">
+        <label for="date">Дата доклада</label>
+        <input
+          class="form-input date"
+          type="datetime-local"
+          name="date"
+          id="date"
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="pdf">Загрузить</label>
+        <input class="form-input" type="file" name="pdf" id="pdf" />
+      </div>
+
+      <div class="form-field">
+        <label for="comments">Оставьте свои комментарии</label>
+        <textarea
+          class="form-input"
+          name="comments"
+          id="comments"
+          placeholder="Комментарии"
+          rows="8"
+        ></textarea>
+      </div>
+
+      <div class="menu-icon">
+        <span></span>
       </div>
 
       <button type="submit">Submit</button>
