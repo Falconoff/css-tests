@@ -90,6 +90,43 @@
       </div>
 
       <div class="form-field">
+        <!-- Элемент <fieldset> это контейнер для группировки нескольких связанных элементов в форме -->
+        <fieldset>
+          <legend>datalist создает список значений</legend>
+          <!-- Элемент <datalist> создает список предопределённых значений, которые можно выбирать при наборе в связанном текстовом поле. Этот список скрыт и становится доступным при получении инпутом фокуса и наборе текста в нём. -->
+          <div class="form-field">
+            <label for="fav">Choose your favourite browser</label>
+            <input class="form-input" list="browsers" name="fav" id="fav" />
+
+            <datalist id="browsers">
+              <option>Edge</option>
+              <option>Firefox</option>
+              <option>Chrome</option>
+              <option>Opera</option>
+              <option>Safari</option>
+            </datalist>
+          </div>
+
+          <div class="form-field">
+            <label for="state">Choose your state</label>
+            <input
+              class="form-input"
+              type="text"
+              name="state"
+              id="state"
+              list="states"
+            />
+            <datalist id="states">
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+            </datalist>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-field">
         <label for="pdf">Загрузить</label>
         <input class="form-input" type="file" name="pdf" id="pdf" />
       </div>

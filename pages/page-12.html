@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-tests</title>
+    <link rel="stylesheet" href="../css/styles-common.css" />
+    <link rel="stylesheet" href="../css/styles-12.css" />
+  </head>
+  <body>
+    <h1>
+      Группировка связанных элементов форм (теги fieldset, legend; атрибут role)
+    </h1>
+
+    <a href="../index.html" class="back-btn">Back to main</a>
+
+    <form class="form" autocomplete="on">
+      <div class="form-field">
+        <!-- Элемент <fieldset> это контейнер для группировки нескольких связанных элементов в форме -->
+        <fieldset>
+          <legend>datalist создает список значений</legend>
+          <!-- Элемент <datalist> создает список предопределённых значений, которые можно выбирать при наборе в связанном текстовом поле. Этот список скрыт и становится доступным при получении инпутом фокуса и наборе текста в нём. -->
+          <div class="form-field">
+            <label for="fav">Choose your favourite browser</label>
+            <input class="form-input" list="browsers" name="fav" id="fav" />
+
+            <datalist id="browsers">
+              <option>Edge</option>
+              <option>Firefox</option>
+              <option>Chrome</option>
+              <option>Opera</option>
+              <option>Safari</option>
+            </datalist>
+          </div>
+
+          <div class="form-field">
+            <label for="state">Choose your state</label>
+            <input
+              class="form-input"
+              type="text"
+              name="state"
+              id="state"
+              list="states"
+            />
+            <datalist id="states">
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+            </datalist>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Атрибут role="group" указывает на то, что элементы внутри этого <div> являются частью группы.
+      Атрибут aria-labelledby="contact-details-head" содержит идентификатор элемента с описанием группы. -->
+      <div
+        class="form-group"
+        role="group"
+        aria-labelledby="contact-details-head"
+      >
+        <p id="contact-details-head">Enter your contact details</p>
+        <label>
+          Name
+          <input type="text" name="username" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" />
+        </label>
+      </div>
+
+      <div class="form-group" role="group" aria-labelledby="language-head">
+        <p id="language-head">Your favourite programming language</p>
+        <label>
+          <input type="checkbox" name="language" value="python" />
+          Python
+        </label>
+        <label>
+          <input type="checkbox" name="language" value="js" />
+          JavaScript
+        </label>
+        <label>
+          <input type="checkbox" name="language" value="ruby" />
+          Ruby
+        </label>
+      </div>
+
+      <div class="form-group" role="group" aria-labelledby="newsletter-head">
+        <p id="newsletter-head">I want to receive</p>
+        <label>
+          <input type="checkbox" name="newsletter" value="weekly" />
+          The weekly newsletter
+        </label>
+        <label>
+          <input type="checkbox" name="newsletter" value="company_offers" />
+          Offers from the company
+        </label>
+        <label>
+          <input type="checkbox" name="newsletter" value="associated_offers" />
+          Offers from associated companies
+        </label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      document.querySelector(".form-input").addEventListener("focusin", e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+
+      document.querySelector(".form-input").addEventListener("focusout", e => {
+        e.currentTarget.placeholder = " ";
+      });
+    </script>
+  </body>
+</html>

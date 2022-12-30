@@ -1,0 +1,43 @@
+.form {
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 20px;
+  font: inherit;
+  border-radius: 3px;
+  border: 1px solid #333;
+}
+
+/* ================================================================== */
+
+legend {
+  color: rgb(25, 0, 255);
+}
+
+/* ============= */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.form-group p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 20px;
+}
