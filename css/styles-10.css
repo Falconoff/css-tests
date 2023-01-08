@@ -51,6 +51,10 @@ li {
   background-color: green;
 }
 
+.checkbox:checked + .label-1 {
+  color: green;
+}
+
 /* второй вариант - input вложен в label */
 .icon {
   display: inline-block;
@@ -63,8 +67,12 @@ li {
 
 .checkbox:checked + .icon {
   border-color: transparent;
-  background-color: #f2f;
+  background-color: #82f;
   background-image: url("../images/icon.svg");
   background-size: contain;
   background-origin: border-box;
+}
+
+.checkbox:checked ~ .text {
+  color: #82f;
 }

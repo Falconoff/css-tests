@@ -1,0 +1,86 @@
+// этот коммент не будет отображён в финальном файле CSS
+/* этот коммент будет сохранён в финальном файле CSS */
+
+// переменная
+$accent-color: #fbbc04;
+
+:root {
+  // интерполяция переменной
+  --accent-color-right: #{$accent-color};
+}
+
+// вложенность
+.container {
+  width: 500px;
+  background-color: #fff;
+
+  .grid {
+    display: flex;
+
+    .card {
+      color: #999;
+    }
+  }
+
+  .main & {
+    /* main */
+    outline: 1px dotted red;
+  }
+
+  > h2 {
+    /* h2 */
+    color: yellow;
+  }
+}
+
+// миксин
+@mixin text($size, $color) {
+  align-text: center;
+  color: $color;
+  font-size: $size;
+  text-decoration: underline;
+}
+
+.text-test {
+  @include text(20px, red);
+}
+//  =>
+// .text-test {
+//   align-text: center;
+//   color: red;
+//   font-size: 20px;
+//   text-decoration: underline;
+// }
+
+.text-another {
+  @include text(16px, blue);
+  text-decoration: none;
+}
+//  =>
+// .text-another {
+//   align-text: center;
+//   color: blue;
+//   font-size: 16px;
+//   text-decoration: underline;
+//   text-decoration: none;
+// }
+
+// ==================================================
+@mixin prefix($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
+}
+
+.gray {
+  @include prefix(transform, scaleY(50%), moz webkit qwe rty);
+}
+//  =>
+// .gray {
+//   -moz-transform: scaleY(50%);
+//   -webkit-transform: scaleY(50%);
+//   -qwe-transform: scaleY(50%);
+//   -rty-transform: scaleY(50%);
+//   transform: scaleY(50%);
+// }
