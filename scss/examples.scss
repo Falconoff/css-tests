@@ -1,3 +1,12 @@
+// Для тренировки синтаксиса можно использовать интерактивную площадку SassMeister: https://www.sassmeister.com/
+// В редакторе VSCode есть расширение Live Sass Compiler, для компиляции SASS: https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass
+// Можно воспользоваться удобным приложением Scout-App: https://scout-app.io/
+
+// Документация SASS https://sass-lang.com/documentation
+// Эстетичный Sass http://prgssr.ru/development/estetichnyj-sass-chast-1-arhitektura-i-organizaciya.html
+
+//
+
 // этот коммент не будет отображён в финальном файле CSS
 /* этот коммент будет сохранён в финальном файле CSS */
 
@@ -33,7 +42,31 @@ $accent-color: #fbbc04;
   }
 }
 
-// миксин
+// =============== плейсхолдеры ===============
+
+// если мы хотим расширить набор стилей, базовый селектор для которого не нужен
+
+%button {
+  display: inline-flex;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: white;
+  background-color: gray;
+}
+
+.button-success {
+  @extend %button;
+  background-color: green;
+}
+
+.button-error {
+  @extend %button;
+  background-color: red;
+}
+
+// =============== миксины ===============
+
 @mixin text($size, $color) {
   align-text: center;
   color: $color;
@@ -64,6 +97,32 @@ $accent-color: #fbbc04;
 //   text-decoration: underline;
 //   text-decoration: none;
 // }
+
+// =============== Директива @each ===============
+
+// Директива @each это цикл который выполнит тело директивы для каждого значения из списка
+
+@each $animal in dog, cat, bird, turtle {
+  .#{$animal}-icon {
+    background-image: url("../images/#{$animal}.png");
+  }
+}
+
+// создаст
+/*
+.dog-icon {
+  background-image: url('../images/dog.png');
+}
+.cat-icon {
+  background-image: url('../images/cat.png');
+}
+.bird-icon {
+  background-image: url('../images/bird.png');
+}
+.turtle-icon {
+  background-image: url('../images/turtle.png');
+}
+*/
 
 // ==================================================
 @mixin prefix($property, $value, $prefixes) {
