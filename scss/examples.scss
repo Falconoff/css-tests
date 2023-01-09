@@ -143,3 +143,26 @@ $accent-color: #fbbc04;
 //   -rty-transform: scaleY(50%);
 //   transform: scaleY(50%);
 // }
+
+// =========== Карты (словари) ===================
+
+// _colors.scss
+$colors: (
+  "primary": #8e3329,
+  "accent": #d98328,
+  "secondary": #5a1321,
+  "foreground": #191919,
+  "background": #e9e9e9,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+// main.scss
+@import "путь/к/colors";
+
+.button {
+  color: getColor("primary");
+  background-color: getColor("background");
+}
