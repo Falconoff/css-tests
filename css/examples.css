@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* этот коммент будет сохранён в финальном файле CSS */
+:root {
+  --accent-color-right: #fbbc04;
+}
+
+.container {
+  width: 500px;
+  background-color: #fff;
+}
+
+.container .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .grid .card {
+  color: #999;
+}
+
+.main .container {
+  /* main */
+  outline: 1px dotted red;
+}
+
+.container > h2 {
+  /* h2 */
+  color: yellow;
+}
+
+.button-success, .button-error {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: white;
+  background-color: gray;
+}
+
+.button-success {
+  background-color: green;
+}
+
+.button-error {
+  background-color: red;
+}
+
+.text-test {
+  align-text: center;
+  color: red;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.text-another {
+  align-text: center;
+  color: blue;
+  font-size: 16px;
+  text-decoration: underline;
+  text-decoration: none;
+}
+
+.dog-icon {
+  background-image: url("../images/dog.png");
+}
+
+.cat-icon {
+  background-image: url("../images/cat.png");
+}
+
+.bird-icon {
+  background-image: url("../images/bird.png");
+}
+
+.turtle-icon {
+  background-image: url("../images/turtle.png");
+}
+
+/*
+.dog-icon {
+  background-image: url('../images/dog.png');
+}
+.cat-icon {
+  background-image: url('../images/cat.png');
+}
+.bird-icon {
+  background-image: url('../images/bird.png');
+}
+.turtle-icon {
+  background-image: url('../images/turtle.png');
+}
+*/
+.gray {
+  -webkit-transform: scaleY(50%);
+  -qwe-transform: scaleY(50%);
+  -rty-transform: scaleY(50%);
+  transform: scaleY(50%);
+}
+
+.button {
+  color: #8e3329;
+  background-color: #e9e9e9;
+}
+/*# sourceMappingURL=examples.css.map */

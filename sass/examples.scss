@@ -160,7 +160,7 @@ $colors: (
 }
 
 // main.scss
-@import "путь/к/colors";
+// @import "путь/к/colors";
 
 .button {
   color: getColor("primary");
