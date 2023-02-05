@@ -10,3 +10,5 @@
 - Формы
 - Кастомные checkboxes
 - Отзывчивая галерея изображений
+
+- Awesome PARALLAX EFFECT ON SCROLL
