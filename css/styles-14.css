@@ -127,4 +127,84 @@ body {
   font-size: 2.5rem;
   margin-bottom: 1.25rem;
 }
-/* video 4:50 */
+
+.content__body p {
+  line-height: 150%;
+}
+
+.content__body p:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.content__body a {
+  color: rgb(220, 97, 3);
+  text-decoration: underline;
+}
+
+.content__body a:hover {
+  text-decoration: none;
+}
+
+/* Animation of trees */
+
+.main-screen__trees span {
+  transform: translate(0, 100%);
+}
+
+.loaded .main-screen__trees span {
+  transform: translate(0, 15%);
+  transition: transform 800ms ease;
+}
+
+.loaded .main-screen__trees_1 span {
+  transition-delay: 500ms;
+}
+
+.loaded .main-screen__trees_2 span {
+  transition-delay: 700ms;
+}
+
+.loaded .main-screen__trees_3 span {
+  transition-delay: 900ms;
+}
+
+.loaded .main-screen__trees_4 span {
+  transition-delay: 1100ms;
+}
+
+.loaded .main-screen__trees_5 span {
+  transition-delay: 1300ms;
+}
+
+.loaded .main-screen__trees_6 span {
+  transition-delay: 1500ms;
+}
+
+/* Animation of mountains */
+
+.main-screen__mountains span {
+  transform: translate(0, 100%);
+}
+
+.loaded .main-screen__mountains span {
+  transform: translate(0, 0);
+  transition: transform 1500ms ease 1500ms;
+}
+
+/* Animation of birds */
+
+.main-screen__birds_1 span {
+  transform: translateX(-200%);
+}
+
+.main-screen__birds_2 span {
+  transform: translateX(200%);
+}
+
+.loaded .main-screen__birds_1 span,
+.loaded .main-screen__birds_2 span {
+  transform: translate(0, 0);
+  transition: transform 800ms ease 2300ms;
+}
+
+/* video 9:38 */
