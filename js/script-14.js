@@ -30,6 +30,18 @@ function windowLoad() {
         translate3d(0, ${mountainsTranslate}%, 0)
         scale(${mountainsScale})
     `;
+
+    trees.forEach((tree, index) => {
+      const treeTranslate = ((20 * (trees.length - index)) / 100) * finalPos;
+      const treeScale = 1 + (1.5 / 100) * finalPos;
+
+      tree.style.cssText = `
+        transform:
+          translate3d(0, ${treeTranslate}%, 0)
+          scale(${treeScale})
+      `;
+    });
   }
 }
-/* video 9:38 */
+
+/* video 10:20 */
