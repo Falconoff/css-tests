@@ -16,6 +16,8 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+
+  pointer-events: none;
 }
 
 /* Trees */
@@ -27,6 +29,7 @@ body {
   top: 0;
   left: 0;
   z-index: 3;
+  will-change: transform;
 }
 
 .main-screen__trees_6 span {
@@ -117,7 +120,7 @@ body {
 
 .content__container {
   margin: 0 auto;
-  min-width: 75rem;
+  max-width: 75rem;
   padding: 3.125rem 0.9375rem 5.125rem 0.9375rem;
 }
 
