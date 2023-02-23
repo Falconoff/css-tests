@@ -58,5 +58,3 @@ function windowLoad() {
     `;
   }
 }
-
-/* video 10:20 */
