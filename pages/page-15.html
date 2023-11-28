@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>test</title>
+  <title>масштабирование картинки при ховере</title>
 
   <style>
     .card {
-      margin: 100px;
+      margin: 50px;
       outline: 2px dotted tomato;
 
       /* у контейнера должна быть явно указана фиксированная высота. Ширина может быть по ширине родителя. */
@@ -35,15 +35,34 @@
     }
 
     /* при ховере на контейнер меняем масштаб картинки */
-    .card:hover .img {
+
+    .increase {
+      transform: scale(1);
+    }
+
+    .card:hover .increase {
       transform: scale(1.1);
+    }
+
+    .decrease {
+      transform: scale(1.1);
+    }
+
+    .card:hover .decrease {
+      transform: scale(1);
     }
   </style>
 </head>
 
 <body>
   <div class="card">
-    <img class="img" src="../img/girl.jpg" alt="girl with cup of coffee">
+    <img class="img increase" src="../img/girl.jpg"
+      alt="girl with cup of coffee">
+  </div>
+
+  <div class="card">
+    <img class="img decrease" src="../img/girl.jpg"
+      alt="girl with cup of coffee">
   </div>
 </body>
 
