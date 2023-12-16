@@ -60,6 +60,7 @@
 }
 
 /* ======== icons ======== */
+/* можно иконки вставить не через инлайн svg, а background-image в CSS */
 
 .btn-2 .icon-1,
 .btn-2 .icon-2 {
