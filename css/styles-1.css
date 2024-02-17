@@ -21,11 +21,13 @@ h1 {
 }
 
 .box {
-  height: 300px;
+  min-height: 300px;
   width: 150px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
+
+  padding: 10px;
 }
 
 .box:not(:last-child) {

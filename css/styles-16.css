@@ -1,0 +1,83 @@
+.div {
+  /* margin-bottom: 10px; */
+
+  padding: 20px;
+  border: 1px solid black;
+
+  color: antiquewhite;
+  font-size: 24px;
+}
+
+.box__grid {
+  display: grid;
+
+  background-color: #9e7e28;
+}
+
+.box__inline-grid {
+  display: inline-grid;
+
+  background-color: #735d24;
+  margin-block: 10px;
+}
+
+/* ========================================= */
+p {
+  line-height: 1.5;
+}
+
+.grid__body {
+  display: grid;
+}
+
+.grid__item {
+  text-align: center;
+}
+
+/* ======= Example 1 ======= */
+.ex-1 {
+  grid-template-columns: 200px 150px 25%;
+  grid-template-rows: 150px;
+}
+
+/* ======= Example 2 ======= */
+.ex-2 {
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 50% 50%;
+}
+
+/* ======= Example 3 ======= */
+.ex-3 {
+  grid-template-columns: 0.1fr 0.2fr 0.1fr;
+  grid-template-rows: 1fr 2fr;
+}
+
+/* ======= Example 4 ======= */
+.ex-4 {
+  grid-template-columns: 200px minmax(250px, 1fr) minmax(250px, 400px);
+  grid-template-rows: 1fr 1fr;
+}
+
+/* ======= Example 5 ======= */
+.ex-5 {
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr 1fr;
+}
+
+/* ======= Example 6 ======= */
+.ex-6 {
+  grid-template-columns: fit-content(300px) 1fr auto;
+  grid-template-rows: 1fr 1fr;
+}
+
+/* ======= Example 7 ======= */
+.ex-7 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/* ======= Example 7 ======= */
+.ex-7 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}

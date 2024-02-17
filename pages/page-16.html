@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS-tests</title>
+  <link rel="stylesheet" href="../css/styles-common.css" />
+  <link rel="stylesheet" href="../css/styles-16.css" />
+</head>
+
+<body>
+  <h1 class="main-header">Grid</h1>
+
+  <a href="../index.html" class="back-btn">Back to main</a>
+
+  <a href="https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG5pXQrW_kDaeZb_uIAMNZIm"
+    target="_blank" rel="noopener noreferrer">CSS Grid Layout - Женя
+    Андриканич</a>
+
+  <div class="div box__grid">display: grid;</div>
+  <div class="div box__inline-grid">display: inline-grid;</div>
+
+  <h4>Example 1 (quantity & dimensions of columns and rows):</h4>
+  <p>grid-template-columns: 200px 150px 25%; <br>
+    grid-template-rows: 150px; // 1-st row 200px, another - auto</p>
+
+  <div class="ex-1 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 2 (fr - frame, relative value, part of all):</h4>
+  <p>grid-template-columns: 1fr 2fr 1fr; <br>grid-template-rows: 50% 50%; </p>
+
+  <div class="ex-2 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 3:</h4>
+  <p>grid-template-columns: 0.1fr 0.2fr 0.1fr;<br>
+    grid-template-rows: 1fr 2fr; </p>
+
+  <div class="ex-3 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 4 (minmax):</h4>
+  <p>grid-template-columns: 200px
+    <b>minmax(</b>250px, 1fr<b>)
+      minmax(</b>250px, 400px<b>)</b>;<br>
+    // <b>minmax</b>'s 1-st value as <b>fr</b> is impossible!!! <br>
+    grid-template-rows: 1fr 1fr;
+  </p>
+
+  <div class="ex-4 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 5 (auto):</h4>
+  <p>grid-template-columns: auto 1fr auto; <br>
+    grid-template-rows: 1fr 1fr;
+  </p>
+  <div class="ex-5 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <p> previous + content</p>
+
+  <div class="ex-5 grid__body">
+    <div class="div grid__item">1 Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Praesentium, explicabo?</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3 Lorem, ipsum dolor.</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 6 ( fit-content() ):</h4>
+  <p>previous, but... fit-content limits width<br> grid-template-columns:
+    fit-content(300px) 1fr auto;
+  </p>
+
+  <div class="ex-6 grid__body">
+    <div class="div grid__item">1 Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Praesentium, explicabo?</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3 Lorem, ipsum dolor.</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 7 (repeat):</h4>
+  <p>grid-template-columns: repeat(3, 1fr); <br>
+    grid-template-rows: repeat(2, 1fr);
+  </p>
+  <div class="ex-7 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h3>Area</h3>
+
+  <div class="grid-wrapper">
+    <header class="grid-header">Header</header>
+    <aside class="grid-side">Sidebar</aside>
+    <main class="grid-content">Content</main>
+  </div>
+
+</body>
+
+</html>
