@@ -130,14 +130,59 @@
     <div class="div grid__item">6</div>
   </div>
 
-  <h3>Area</h3>
+  <h3>Example 8 (Имена областей) </h3>
+  <h4>grid-template-areas, grid-area</h4>
 
-  <div class="grid-wrapper">
-    <header class="grid-header">Header</header>
-    <aside class="grid-side">Sidebar</aside>
-    <main class="grid-content">Content</main>
+  <div class="ex-8 grid__body grid-wrapper">
+    <header class="div grid__item grid-header">Header</header>
+    <aside class="div grid__item grid-side">Sidebar</aside>
+    <main class="div grid__item grid-content">Content</main>
   </div>
 
+  <h4>Short prop (grid-template: rows / columns):</h4>
+  <p>grid-template-columns: repeat(3, 1fr); <br>
+    grid-template-rows: repeat(2, 1fr); <br>
+    <b>is equal</b> <br>
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  </p>
+
+  <h4>Example 9 (grid-template)</h4>
+
+  <div class="ex-9 grid__body">
+    <header class="div grid__item grid-header">Header</header>
+    <aside class="div grid__item grid-side">Sidebar</aside>
+    <main class="div grid__item grid-content">Content</main>
+  </div>
+
+  <h4>Example 10 (Неявная сетка):</h4>
+  grid-template: 1fr 1fr / repeat(3, 1fr);<br>
+  7-й элемент выпадает, находится в неявной сетке. Для управления высотой и
+  шириной таких элементов используются <b>grid-auto-rows</b> и
+  <b>grid-auto-columns</b>
+  <br> Последнее работает только если grid-template не
+  задан вообще
+  <p>
+  </p>
+
+  <div class="ex-10 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+    <div class="div grid__item">7</div>
+  </div>
+
+  <div class="ex-11 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+    <div class="div grid__item">7</div>
+  </div>
 </body>
 
 </html>
