@@ -174,6 +174,9 @@
     <div class="div grid__item">7</div>
   </div>
 
+  <p>
+    grid-auto-flow: dense;
+  </p>
   <div class="ex-11 grid__body">
     <div class="div grid__item">1</div>
     <div class="div grid__item">2</div>
@@ -183,6 +186,158 @@
     <div class="div grid__item">6</div>
     <div class="div grid__item">7</div>
   </div>
+
+  <h2>Элемент сетки</h2>
+  <p>
+    grid-элемент - блочный элемент. Маржины grid-элементов не схлопываются.
+  </p>
+
+  <h3>Размещение элементов с помощью линий сетки</h3>
+
+  <h4>Example 12</h4>
+  <p>grid-row-start: auto;<br>
+    grid-row-end: auto; <br>
+    grid-column-start: auto; <br>
+    grid-column-end: auto;</p>
+  <div class="ex-12 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 13</h4>
+  <p>grid-row-start: 1;<br>
+    grid-row-end: 2; <br>
+    grid-column-start: auto; <br>
+    grid-column-end: auto;</p>
+  <div class="ex-13 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 14</h4>
+  <p>grid-row-start: 1;<br>
+    grid-row-end: <b>3</b>; <br>
+    grid-column-start: auto; <br>
+    grid-column-end: auto;</p>
+  <div class="ex-14 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 15</h4>
+  <p>grid-row-start: 1;<br>
+    grid-row-end: 3; <br>
+    grid-column-start: <b>1</b>; <br>
+    grid-column-end: <b>3</b>;</p>
+  <div class="ex-15 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 16 (change order of items)</h4>
+  <p><b>grid-row-start: 2</b>;<br>
+    <b>grid-column-start: 3</b>; <br>
+  </p>
+  <div class="ex-16 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 17 (для заполнения элементом нескольких ячеек можно использовать
+    ключевое слово span и после него кол-во ячеек)</h4>
+  <p>grid-row-start: <b>span 2</b>;<br>
+    grid-column-start: <b>span 2</b>; <br>
+  </p>
+  <div class="ex-17 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h3>Размещение элементов с помощью ИМЕНИ линий сетки</h3>
+
+  <h4>Example 18 ( [имя] размер)</h4>
+  <p>
+    grid-template-rows: [start] 1fr [row2] 1fr [row-end]; <br>
+    grid-template-columns: [start] 1fr [col2] 1fr [col3] 1fr [col-end];
+  </p>
+
+  <div class="ex-18 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 19 (короткая запись start / end)</h4>
+  <p>
+    grid-row: <b>1/2</b>; <br>
+    grid-column: <b>2/3</b>;
+  </p>
+
+  <div class="ex-19 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 20 (короткая запись start / end)</h4>
+  <p>
+    grid-row: <b>row2 / row-end</b>; <br>
+    grid-column: <b>col2 / col3</b>;
+  </p>
+
+  <div class="ex-20 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
+  <h4>Example 21 (порядок вывода элемента с помощью order)</h4>
+  <p>
+    order: 6;
+  </p>
+
+  <div class="ex-21 grid__body">
+    <div class="div grid__item">1</div>
+    <div class="div grid__item">2</div>
+    <div class="div grid__item">3</div>
+    <div class="div grid__item">4</div>
+    <div class="div grid__item">5</div>
+    <div class="div grid__item">6</div>
+  </div>
+
 </body>
 
 </html>
