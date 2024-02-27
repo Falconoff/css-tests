@@ -28,6 +28,8 @@ p {
 
 .grid__body {
   display: grid;
+
+  outline: 2px dotted blue;
 }
 
 .grid__item {
@@ -290,4 +292,98 @@ p {
 .ex-21 .grid__item:nth-child(6) {
   order: 4;
   background-color: #006970;
+}
+
+/* ======= Example 22 ======= */
+.ex-22 {
+  grid-template-rows: [start] 120px [row2] 120px [row-end];
+  grid-template-columns: [start] 1fr [col2] 1fr [col3] 1fr [col-end];
+
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+/* ======= Example 23 ======= */
+.ex-23 {
+  grid-template-rows: [start] 120px [row2] 120px [row-end];
+  grid-template-columns: [start] 1fr [col2] 1fr [col3] 1fr [col-end];
+
+  justify-items: start;
+  align-items: stretch;
+}
+
+/* ======= Example 24 ======= */
+.ex-24 {
+  grid-template-rows: [start] 120px [row2] 120px [row-end];
+  grid-template-columns: [start] 1fr [col2] 1fr [col3] 1fr [col-end];
+
+  justify-items: end;
+  align-items: stretch;
+}
+
+/* ======= Example 25 ======= */
+.ex-25 {
+  grid-template-rows: [start] 120px [row2] 120px [row-end];
+  grid-template-columns: [start] 1fr [col2] 1fr [col3] 1fr [col-end];
+
+  justify-items: start;
+  align-items: start;
+}
+
+/* ======= Example 26 ======= */
+.ex-26 {
+  grid-template-rows: [start] 120px [row2] 120px [row-end];
+  grid-template-columns: [start] 1fr [col2] 1fr [col3] 1fr [col-end];
+
+  justify-items: start;
+  align-items: end;
+}
+
+/* ======= Example 27 ======= */
+.ex-27 {
+  grid-template-rows: [start] 120px [row2] 120px [row-end];
+  grid-template-columns: [start] 1fr [col2] 1fr [col3] 1fr [col-end];
+
+  justify-items: start;
+  align-items: end;
+}
+.ex-27 .grid__item:nth-child(1) {
+  justify-self: stretch;
+  align-self: stretch;
+}
+
+.ex-27 .grid__item:nth-child(2) {
+  justify-self: end;
+  align-self: end;
+}
+
+.ex-27 .grid__item:nth-child(5) {
+  justify-self: stretch;
+  align-self: start;
+}
+
+/* ======= Example 28 ======= */
+.ex-28 {
+  grid-template-rows: [start] 120px [row2] 120px [row-end];
+  grid-template-columns: [start] 1fr [col2] 1fr [col3] 1fr [col-end];
+}
+.ex-28 .grid__item:nth-child(1) {
+  margin: auto;
+}
+
+/* ======= Example 29 ======= */
+.ex-29 {
+  grid-template-rows: [start] 120px [row2] 120px [row-end];
+  grid-template-columns: [start] 1fr [col2] 1fr [col3] 1fr [col-end];
+
+  row-gap: 10px;
+  column-gap: 20px;
+}
+
+/* ======= Example 30 ======= */
+.ex-30 {
+  grid-template-rows: [start] 120px [row2] 120px [row-end];
+  grid-template-columns: [start] 1fr [col2] 1fr [col3] 1fr [col-end];
+
+  gap: 30px;
 }
