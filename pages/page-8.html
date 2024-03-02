@@ -1,183 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS-tests</title>
-    <link rel="stylesheet" href="../css/styles-common.css" />
-    <link rel="stylesheet" href="../css/styles-8.css" />
-  </head>
-  <body>
-    <h1>Form</h1>
 
-    <a href="../index.html" class="back-btn">Back to main</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS-tests</title>
+  <link rel="stylesheet" href="../css/styles-common.css" />
+  <link rel="stylesheet" href="../css/styles-8.css" />
+</head>
 
-    <form class="form" autocomplete="on">
-      <!-- label после input  -->
-      <!-- в первом инпуте управляем отображением placeholder-а при помощи скрипта -->
-      <div class="form-field">
-        <input
-          type="text"
-          class="form-input"
-          name="name"
-          id="name"
-          placeholder=" "
-          data-placeholder="Иван Иванович"
-          title="Enter your name"
-          autocomplete="name"
-          required
-        />
-        <label for="name" class="form-label">Name</label>
-      </div>
+<body>
+  <h1>Form</h1>
 
-      <div class="form-field">
-        <input
-          type="email"
-          class="form-input"
-          name="mail"
-          id="mail"
-          placeholder="ivan@gmail.com"
-          title="Enter your email"
-          autocomplete="email"
-          required
-        />
-        <label for="email" class="form-label">e-mail</label>
-      </div>
+  <a href="../index.html" class="back-btn">Back to main</a>
 
-      <div class="form-field">
-        <input
-          type="phone"
-          class="form-input"
-          name="phone"
-          id="phone"
-          placeholder=" "
-          title="нет placeholder"
-          autocomplete="tel"
-          required
-        />
-        <label for="phone" class="form-label">нет placeholder-a</label>
-      </div>
+  <!-- autocomplete - автозаполнение использовать аккуратно! Можно для имён, почты. 
+    НЕ ИСПОЛЬЗОВАТЬ для паролей! -->
+  <form class="form" autocomplete="on">
+    <!-- label после input  -->
+    <!-- в первом инпуте управляем отображением placeholder-а при помощи скрипта -->
+    <div class="form-field">
+      <input type="text" class="form-input" name="name" id="name"
+        placeholder=" " data-placeholder="Иван Иванович" title="Enter your name"
+        autocomplete="name" required />
+      <label for="name" class="form-label">Name</label>
+    </div>
 
-      <div class="form-field">
-        <input
-          type="phone"
-          class="form-input"
-          name="phone"
-          id="phone"
-          placeholder=" "
-          title="нет placeholder"
-          required
-        />
-        <label for="phone" class="form-label with-icon"
-          >нет placeholder-a + icon</label
-        >
-        <span class="icon"></span>
-      </div>
+    <div class="form-field">
+      <input type="email" class="form-input" name="mail" id="mail"
+        placeholder="ivan@gmail.com" title="Enter your email"
+        autocomplete="email" required />
+      <label for="email" class="form-label">e-mail</label>
+    </div>
 
-      <!-- ================================================================== -->
+    <div class="form-field">
+      <input type="phone" class="form-input" name="phone" id="phone"
+        placeholder=" " title="нет placeholder" autocomplete="tel" required />
+      <label for="phone" class="form-label">нет placeholder-a</label>
+    </div>
 
-      <!-- ==================== Группировка полей (связанных элементов формы) ========================= -->
+    <div class="form-field">
+      <input type="phone" class="form-input" name="phone" id="phone"
+        placeholder=" " title="нет placeholder" required />
+      <label for="phone" class="form-label with-icon">нет placeholder-a +
+        icon</label>
+      <span class="icon"></span>
+    </div>
 
-      <div class="form-field">
-        <label for="date">Дата доклада</label>
-        <input
-          class="form-input date"
-          type="datetime-local"
-          name="date"
-          id="date"
-        />
-      </div>
+    <!-- ================================================================== -->
 
-      <div class="form-field">
-        <!-- Элемент <fieldset> это контейнер для группировки нескольких связанных элементов в форме, а вложенный <legend> выполянет роль заголовка группы. -->
-        <fieldset>
-          <legend>datalist создает список значений</legend>
-          <!-- Элемент <datalist> создает список предопределённых значений, которые можно выбирать при наборе в связанном текстовом поле. Этот список скрыт и становится доступным при получении инпутом фокуса и наборе текста в нём. -->
-          <div class="form-field">
-            <label for="fav">Choose your favourite browser</label>
-            <input class="form-input" list="browsers" name="fav" id="fav" />
+    <!-- ==================== Группировка полей (связанных элементов формы) ========================= -->
 
-            <datalist id="browsers">
-              <option>Edge</option>
-              <option>Firefox</option>
-              <option>Chrome</option>
-              <option>Opera</option>
-              <option>Safari</option>
-            </datalist>
-          </div>
+    <div class="form-field">
+      <label for="date">Дата доклада</label>
+      <input class="form-input date" type="datetime-local" name="date"
+        id="date" />
+    </div>
 
-          <div class="form-field">
-            <label for="state">Choose your state</label>
-            <input
-              class="form-input"
-              type="text"
-              name="state"
-              id="state"
-              list="states"
-            />
-            <datalist id="states">
-              <option value="AL">Alabama</option>
-              <option value="AK">Alaska</option>
-              <option value="AZ">Arizona</option>
-              <option value="AR">Arkansas</option>
-            </datalist>
-          </div>
-        </fieldset>
-      </div>
+    <div class="form-field">
+      <!-- Элемент <fieldset> это контейнер для группировки нескольких связанных элементов в форме, а вложенный <legend> выполянет роль заголовка группы. -->
+      <fieldset>
+        <legend>datalist создает список значений</legend>
+        <!-- Элемент <datalist> создает список предопределённых значений, которые можно выбирать при наборе в связанном текстовом поле. Этот список скрыт и становится доступным при получении инпутом фокуса и наборе текста в нём. -->
+        <div class="form-field">
+          <label for="fav">Choose your favourite browser</label>
+          <input class="form-input" list="browsers" name="fav" id="fav" />
 
-      <!-- Элементы <fieldset> и <legend> имеют отличную семантику, но ограниченные возможности оформления. В большинстве случаев для группировки элементов формы используется <div> с атрибутами доступности role и aria-labelledby.
+          <datalist id="browsers">
+            <option>Edge</option>
+            <option>Firefox</option>
+            <option>Chrome</option>
+            <option>Opera</option>
+            <option>Safari</option>
+          </datalist>
+        </div>
+
+        <div class="form-field">
+          <label for="state">Choose your state</label>
+          <input class="form-input" type="text" name="state" id="state"
+            list="states" />
+          <datalist id="states">
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+          </datalist>
+        </div>
+      </fieldset>
+    </div>
+
+    <!-- Элементы <fieldset> и <legend> имеют отличную семантику, но ограниченные возможности оформления. В большинстве случаев для группировки элементов формы используется <div> с атрибутами доступности role и aria-labelledby.
       Атрибут role="group" указывает на то, что элементы внутри этого <div> являются частью группы.
       Атрибут aria-labelledby="contact-details-head" содержит идентификатор элемента с описанием группы.
        -->
-      <div
-        class="form-group"
-        role="group"
-        aria-labelledby="contact-details-head"
-      >
-        <p id="contact-details-head">Enter your contact details</p>
-        <label>
-          Name
-          <input type="text" name="username" />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" />
-        </label>
-      </div>
-      <!-- ==================== / Группировка полей (связанных элементов формы) ========================= -->
+    <div class="form-group" role="group" aria-labelledby="contact-details-head">
+      <p id="contact-details-head">Enter your contact details</p>
+      <label>
+        Name
+        <input type="text" name="username" />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" />
+      </label>
+    </div>
+    <!-- ==================== / Группировка полей (связанных элементов формы) ========================= -->
 
-      <div class="form-field">
-        <label for="pdf">Загрузить</label>
-        <input class="form-input" type="file" name="pdf" id="pdf" />
-      </div>
+    <div class="form-field">
+      <label for="pdf">Загрузить</label>
+      <input class="form-input" type="file" name="pdf" id="pdf" />
+    </div>
 
-      <div class="form-field">
-        <label for="comments">Оставьте свои комментарии</label>
-        <textarea
-          class="form-input"
-          name="comments"
-          id="comments"
-          placeholder="Комментарии"
-          rows="8"
-        ></textarea>
-      </div>
+    <div class="form-field">
+      <label for="comments">Оставьте свои комментарии</label>
+      <textarea class="form-input" name="comments" id="comments"
+        placeholder="Комментарии" rows="8"></textarea>
+    </div>
 
-      <div class="menu-icon">
-        <span></span>
-      </div>
+    <div class="menu-icon">
+      <span></span>
+    </div>
 
-      <button type="submit">Submit</button>
-    </form>
+    <button type="submit">Submit</button>
+  </form>
 
-    <script>
-      document.querySelector(".form-input").addEventListener("focusin", e => {
-        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
-      });
+  <script>
+    document.querySelector(".form-input").addEventListener("focusin", e => {
+      e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+    });
 
-      document.querySelector(".form-input").addEventListener("focusout", e => {
-        e.currentTarget.placeholder = " ";
-      });
-    </script>
-  </body>
+    document.querySelector(".form-input").addEventListener("focusout", e => {
+      e.currentTarget.placeholder = " ";
+    });
+  </script>
+</body>
+
 </html>
